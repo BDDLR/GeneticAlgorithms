@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void fillArray(int arr[]);
+void fillArray(int arr[], int tam);
 
 int main(int argc, char const *argv[])
 {
@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
 	int values[10];
 	srand (time(NULL));
 
-	fillArray(values);
+	fillArray(values, sizeof(values)/sizeof(int));
 
 	// Open a new window for drawing.
 	gfx_open(xsize,ysize,"Line Histogram");
@@ -37,14 +37,13 @@ int main(int argc, char const *argv[])
 	for (int i = 0; i < (sizeof(values)/sizeof(int)) ; i++)
 	{
 		if(i == (sizeof(values)/sizeof(int)) -1){
-			gfx_line((i+1)*step, max - (values[i]*5), (i+1)*step, max - (values[i]*5));
 			gfx_Number((i+1)*step-5, max - (values[i]*5+10), (char*)to_string(values[i]).c_str());
-			gfx_Number((i+1)*step, 320, (char*)to_string(values[i]).c_str());	
+			gfx_Number((i+1)*step, 320, (char*)to_string(i+1).c_str());
 		}
 		else{
 			gfx_line((i+1)*step, max - (values[i]*5), (i+2)*step, max - (values[i+1]*5));
 			gfx_Number((i+1)*step-5, max - (values[i]*5+10), (char*)to_string(values[i]).c_str());
-			gfx_Number((i+1)*step, 320, (char*)to_string(values[i]).c_str());	
+			gfx_Number((i+1)*step, 320, (char*)to_string(i+1).c_str());	
 		}
 		
 	}
@@ -63,8 +62,8 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 
-void fillArray(int arr[]){
-	for (int i = 0; i < 10; i++)
+void fillArray(int arr[], int tam){
+	for (int i = 0; i < tam; i++)
 	{
 		arr[i] = rand() % 50;
 	}
