@@ -28,6 +28,7 @@ int main(int argc, char const *argv[])
 			else
 				printf(" %.02f | \n", f[i]);
 		}
+		printf("\n");
 	}
 	return 0;
 }

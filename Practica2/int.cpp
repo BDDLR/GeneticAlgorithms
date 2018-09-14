@@ -29,6 +29,7 @@ int main(int argc, char const *argv[])
 			else
 				printf(" %d | \n", f[i]);
 		}
+		printf("\n");
 	}
 	return 0;
 }
