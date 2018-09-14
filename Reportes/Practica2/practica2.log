@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.13)  10 SEP 2018 11:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.13)  13 SEP 2018 21:48
 entering extended mode
-**./practica1.tex
-(practica1.tex
+**./practica2.tex
+(practica2.tex
 LaTeX2e <2018-04-01> patch level 5
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -168,11 +168,11 @@ s
 \f@nch@O@erf=\skip52
 \f@nch@O@olf=\skip53
 \f@nch@O@orf=\skip54
-)) (practica1.aux (portada.aux)
+)) (practica2.aux (portada.aux)
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 )
-\openout1 = `practica1.aux'.
+\openout1 = `practica2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
@@ -289,51 +289,20 @@ G,.JBIG2,.JB2,.eps]
 
 
 {C:/Users/Bryan2/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-
- []
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 45.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 45.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 45.
-<images/ej1.png, id=9, 1204.5pt x 431.6125pt>
+<images/ej1.png, id=9, 798.985pt x 511.9125pt>
 File: images/ej1.png Graphic file (type png)
 <use images/ej1.png>
-Package pdftex.def Info: images/ej1.png  used on input line 49.
-(pdftex.def)             Requested size: 361.35278pt x 129.48474pt.
+Package pdftex.def Info: images/ej1.png  used on input line 54.
+(pdftex.def)             Requested size: 399.49152pt x 255.95563pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -343,36 +312,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 ]
-File: images/ej1.png Graphic file (type png)
-<use images/ej1.png>
-Package pdftex.def Info: images/ej1.png  used on input line 55.
-(pdftex.def)             Requested size: 361.35278pt x 129.48474pt.
-File: images/ej1.png Graphic file (type png)
-<use images/ej1.png>
-Package pdftex.def Info: images/ej1.png  used on input line 61.
-(pdftex.def)             Requested size: 361.35278pt x 129.48474pt.
- [2 <./images/ej1.png>] (practica1.aux (portada.aux)
+<images/ej2.png, id=18, 798.985pt x 511.9125pt>
+File: images/ej2.png Graphic file (type png)
+<use images/ej2.png>
+Package pdftex.def Info: images/ej2.png  used on input line 60.
+(pdftex.def)             Requested size: 399.49152pt x 255.95563pt.
+<images/ej3.png, id=19, 798.985pt x 511.9125pt>
+File: images/ej3.png Graphic file (type png)
+<use images/ej3.png>
+Package pdftex.def Info: images/ej3.png  used on input line 66.
+(pdftex.def)             Requested size: 399.49152pt x 255.95563pt.
+ [2 <./images/ej1.png> <./images/ej2.png>]
+<images/ej4.png, id=25, 798.985pt x 511.9125pt>
+File: images/ej4.png Graphic file (type png)
+<use images/ej4.png>
+Package pdftex.def Info: images/ej4.png  used on input line 72.
+(pdftex.def)             Requested size: 399.49152pt x 255.95563pt.
+ [3 <./images/ej3.png> <./images/ej4.png>] (practica2.aux (portada.aux)
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 3725 strings out of 492973
- 51119 string characters out of 3135929
- 138903 words of memory out of 3000000
- 7528 multiletter control sequences out of 15000+200000
- 8896 words of font info for 31 fonts, out of 3000000 for 9000
+ 3722 strings out of 492973
+ 51144 string characters out of 3135929
+ 136903 words of memory out of 3000000
+ 7526 multiletter control sequences out of 15000+200000
+ 7162 words of font info for 25 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,45p,649b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,12n,45p,278b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmti12.pfb>
-Output written on practica1.pdf (3 pages, 109023 bytes).
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmti12.pfb>
+Output written on practica2.pdf (4 pages, 831127 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
+ 56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
