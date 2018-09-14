@@ -1,28 +1,35 @@
 #include <cstdio>
 #include <cstdlib>
+#include <iostream>
 #include <time.h>
 
 using namespace std;
-
 void fillArray();
 
 
 int bin[10];
 
+
+
 int main(int argc, char const *argv[])
 {
 	srand (time(NULL));
-	fillArray();
 
-	for (int i = 0; i < 10; i++)
+	for (int j = 0; j < 10; j++)
 	{
-		if(i == 0)
-			printf("| %d | ", bin[i]);
-		else if(i < 9){
-			printf(" %d | ", bin[i]);
+		cout << "Individuo No. " << j+1 << endl;
+		fillArray();
+		for (int i = 0; i < 10; i++)
+		{
+			if(i == 0)
+				printf("\t| %d | ", bin[i]);
+			else if(i < 9){
+				printf(" %d | ", bin[i]);
+			}
+			else
+				printf(" %d | \n", bin[i]);
 		}
-		else
-			printf(" %d | \n", bin[i]);
+		printf("\n");
 	}
 
 	return 0;

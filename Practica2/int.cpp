@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <cstdlib>
+#include <iostream>
 #include <time.h>
 
 using namespace std;
@@ -12,19 +13,23 @@ int f[10];
 int main(int argc, char const *argv[])
 {
 	srand (time(NULL));
-	fillArray();
+	
 
-	for (int i = 0; i < 10; i++)
+	for (int j = 0; j < 10; j++)
 	{
-		if(i == 0)
-			printf("| %d | ", f[i]);
-		else if(i < 9){
-			printf(" %d | ", f[i]);
+		cout << "Individuo No. " << j+1 << endl;
+		fillArray();
+		for (int i = 0; i < 10; i++)
+		{
+			if(i == 0)
+				printf("\t| %d | ", f[i]);
+			else if(i < 9){
+				printf(" %d | ", f[i]);
+			}
+			else
+				printf(" %d | \n", f[i]);
 		}
-		else
-			printf(" %d | \n", f[i]);
 	}
-
 	return 0;
 }
 
