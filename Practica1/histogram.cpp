@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
 	int xsize = 1200;
 
 	//Array of values
-	int values[10];
+	int values[15];
 	srand (time(NULL));
 
 	fillArray(values, sizeof(values)/sizeof(int));
@@ -29,6 +29,8 @@ int main(int argc, char const *argv[])
 	//Axis line
 	gfx_line(80, 300, 1110, 300);
 
+	float factor = 0.2;	
+
 
 	int max = 300;
 	int step = 1000 / (sizeof(values)/sizeof(int));
@@ -37,12 +39,12 @@ int main(int argc, char const *argv[])
 	for (int i = 0; i < (sizeof(values)/sizeof(int)) ; i++)
 	{
 		if(i == (sizeof(values)/sizeof(int)) -1){
-			gfx_Number((i+1)*step-5, max - (values[i]*5+10), (char*)to_string(values[i]).c_str());
+			gfx_Number((i+1)*step-5, max - (values[i] * factor + 10), (char*)to_string(values[i]).c_str());
 			gfx_Number((i+1)*step, 320, (char*)to_string(i+1).c_str());
 		}
 		else{
-			gfx_line((i+1)*step, max - (values[i]*5), (i+2)*step, max - (values[i+1]*5));
-			gfx_Number((i+1)*step-5, max - (values[i]*5+10), (char*)to_string(values[i]).c_str());
+			gfx_line((i+1)*step, max - (values[i] * factor), (i+2)*step, max - (values[i+1] * factor));
+			gfx_Number((i+1)*step-5, max - (values[i] * factor + 10), (char*)to_string(values[i]).c_str());
 			gfx_Number((i+1)*step, 320, (char*)to_string(i+1).c_str());	
 		}
 		
@@ -65,6 +67,6 @@ int main(int argc, char const *argv[])
 void fillArray(int arr[], int tam){
 	for (int i = 0; i < tam; i++)
 	{
-		arr[i] = rand() % 50;
+		arr[i] = rand() % 1000;
 	}
 }
