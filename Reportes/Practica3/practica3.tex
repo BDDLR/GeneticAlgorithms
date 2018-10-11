@@ -7,6 +7,22 @@
 %% --------- COMIENZA EL DESARROLLO DEL DOCUMENTO --------
 
 \section*{Introducción}
+Una parte fundamental del funcionamiento de un algoritmo genético es el proceso de selección de candidatos a reproducirse. En los algoritmos genéticos, este proceso suele darse de manera probabilística, es decir, aún los individuos menos aptos tienen una oportunidad de sobrevivir.\\
+
+Los algoritmos de selección proporcional son esquemas en los cuales se eligen individuos de acuerdo a su contribución de aptitud con respecto al total de la población dentro de éstos mecanismos de selección se encuentra el método de \textbf{La ruleta}.\\
+
+La técnica de la ruleta fue propuesta por DeJong y ha sido el método más usado. El algoritmo es simple pero ineficiente, con complejidad $O(n^{2})$.\\
+
+El algoritmo es el siguiente:
+\begin{enumerate}
+	\item Calcular la suma de valores esperados $T$
+	\item Repetir $N$ veces ($N$ es el tamaño de la población):
+	\begin{itemize}
+		\item Generar un número aleatorio $r$ entre 0.0 y $T$
+		\item Ciclar a través de los individuos de la población sumando los valores esperados hasta que la suma sea mayor o igual a $r$
+		\item El individuo que haga que esta suma exceda el límite es el seleccionado
+	\end{itemize}
+\end{enumerate}
 
 
 \section*{Contenido}
@@ -68,29 +84,69 @@ Una vez que se tenga la población mutada, se establece ésta como población in
 
 Al obtener la población final de una generación, se obtiene la aptitud del individuo de menor valor, la aptitud del individuo de mayor valor y el promedio de aptitud de cada generación.\\
 
-Ejemplo con 5 generaciones:
+A continuación se muestran 3 ejemplos con 5 generaciones, en los que la línea azul representa la aptitud del mejor individuo de cada generación, la línea roja representa la aptitud del peor individuo de cada generación y la línea blanca representa el promdedio de aptitud de cada generación.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale = 1]{images/mutacion}
-	\caption{Resultado de 5 generaciones}
+	\includegraphics[scale = 0.4]{images/5gen1}
+	\caption{Resultado 1 con 5 generaciones}
 \end{figure}
 
-Ejemplo con 10 generaciones:
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale = 1]{images/mutacion}
-	\caption{Resultado de 10 generaciones}
+	\includegraphics[scale = 0.4]{images/5gen2}
+	\caption{Resultado 2 con 5 generaciones}
 \end{figure}
 
-Ejemplo con 15 generaciones:
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale = 1]{images/mutacion}
-	\caption{Resultado de 10 generaciones}
+	\includegraphics[scale = 0.4]{images/5gen3}
+	\caption{Resultado 3 con 5 generaciones}
+\end{figure}
+
+A continuación se muestran 3 ejemplos con 10 generaciones:
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/10gen1}
+	\caption{Resultado 1 con 10 generaciones}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/10gen2}
+	\caption{Resultado 2 con 10 generaciones}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/10gen3}
+	\caption{Resultado 3 con 10 generaciones}
+\end{figure}
+
+A continuación se muestran 3 ejemplos con 15 generaciones:
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/15gen1}
+	\caption{Resultado 1 con 15 generaciones}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/15gen2}
+	\caption{Resultado 2 con 15 generaciones}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/15gen3}
+	\caption{Resultado 3 con 15 generaciones}
 \end{figure}
 
 
 \section*{Conclusión}
+
+El fin de un algoritmo genético es simular la evolución de una población de individuos. En esta práctica, utilizamos distintos métodos aleatorios que se presentan en la naturaleza y generan una evolución, tales como la cruza y mutación de individuos, sin olvidar la selección de individuos para siguientes generaciones.\\
+
+El algoritmo genético de selección por ruleta es uno de los más utilizados, sin embargo considero que pueden existir casos en los que la selección de individuos se aplique sobre los individuos de menor aptitud, dado que el número aleatorio de referencia puede ocasionar que se seleccione un individuo con poca aptitud. Aún así, este algoritmo genético permite dar un vistazo de las distintas combinaciones que se presentan en la naturaleza, tanto de flora o fauna, y nos concientiza acerca de que no siempre los individuos más aptos son los que sobreviven, sin embargo, tienen una mayor probabilidad de conseguirlo.
 
 
 \end{document}

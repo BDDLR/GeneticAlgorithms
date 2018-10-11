@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.13)  10 OCT 2018 18:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.13)  10 OCT 2018 23:03
 entering extended mode
 **./practica3.tex
 (practica3.tex
@@ -289,23 +289,33 @@ G,.JBIG2,.JB2,.eps]
 
 
 {C:/Users/Bryan2/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 14.
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
 <images/ruleta.png, id=9, 509.65407pt x 117.43875pt>
 File: images/ruleta.png Graphic file (type png)
 <use images/ruleta.png>
-Package pdftex.def Info: images/ruleta.png  used on input line 32.
+Package pdftex.def Info: images/ruleta.png  used on input line 48.
 (pdftex.def)             Requested size: 509.65282pt x 117.43845pt.
 
-Overfull \hbox (9.16882pt too wide) in paragraph at lines 32--33
- [][] 
- []
-
-<images/cruza.png, id=11, 635.37375pt x 127.22531pt>
-File: images/cruza.png Graphic file (type png)
-<use images/cruza.png>
-Package pdftex.def Info: images/cruza.png  used on input line 47.
-(pdftex.def)             Requested size: 508.29968pt x 101.78038pt.
-
-Overfull \hbox (7.81569pt too wide) in paragraph at lines 47--48
+Overfull \hbox (9.16882pt too wide) in paragraph at lines 48--49
  [][] 
  []
 
@@ -317,67 +327,113 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1
 
- <./images/ruleta.png>]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 51.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 51.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 51.
+]
+<images/cruza.png, id=18, 635.37375pt x 127.22531pt>
+File: images/cruza.png Graphic file (type png)
+<use images/cruza.png>
+Package pdftex.def Info: images/cruza.png  used on input line 63.
+(pdftex.def)             Requested size: 508.29968pt x 101.78038pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
-
+Overfull \hbox (7.81569pt too wide) in paragraph at lines 63--64
+ [][] 
  []
 
-<images/mutacion.png, id=17, 438.13687pt x 213.04594pt>
-File: images/mutacion.png Graphic file (type png)
-<use images/mutacion.png>
-Package pdftex.def Info: images/mutacion.png  used on input line 63.
-(pdftex.def)             Requested size: 438.13579pt x 213.04541pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
+<images/mutacion.png, id=19, 438.13687pt x 213.04594pt>
+File: images/mutacion.png Graphic file (type png)
+<use images/mutacion.png>
+Package pdftex.def Info: images/mutacion.png  used on input line 79.
+(pdftex.def)             Requested size: 438.13579pt x 213.04541pt.
+[2 <./images/ruleta.png> <./images/cruza.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-File: images/mutacion.png Graphic file (type png)
-<use images/mutacion.png>
-Package pdftex.def Info: images/mutacion.png  used on input line 74.
-(pdftex.def)             Requested size: 438.13579pt x 213.04541pt.
-[2 <./images/cruza.png> <./images/mutacion.png>]
-File: images/mutacion.png Graphic file (type png)
-<use images/mutacion.png>
-Package pdftex.def Info: images/mutacion.png  used on input line 81.
-(pdftex.def)             Requested size: 438.13579pt x 213.04541pt.
-File: images/mutacion.png Graphic file (type png)
-<use images/mutacion.png>
-Package pdftex.def Info: images/mutacion.png  used on input line 88.
-(pdftex.def)             Requested size: 438.13579pt x 213.04541pt.
- [3] [4] (practica3.aux
-(portada.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+<images/5gen1.png, id=25, 1207.51125pt x 431.6125pt>
+File: images/5gen1.png Graphic file (type png)
+<use images/5gen1.png>
+Package pdftex.def Info: images/5gen1.png  used on input line 90.
+(pdftex.def)             Requested size: 482.99594pt x 172.64194pt.
+<images/5gen2.png, id=26, 1209.51875pt x 428.60126pt>
+File: images/5gen2.png Graphic file (type png)
+<use images/5gen2.png>
+Package pdftex.def Info: images/5gen2.png  used on input line 96.
+(pdftex.def)             Requested size: 483.79893pt x 171.43745pt.
+[3 <./images/mutacion.png> <./images/5gen1.png>]
+<images/5gen3.png, id=31, 1206.5075pt x 430.60875pt>
+File: images/5gen3.png Graphic file (type png)
+<use images/5gen3.png>
+Package pdftex.def Info: images/5gen3.png  used on input line 102.
+(pdftex.def)             Requested size: 482.59445pt x 172.24043pt.
+<images/10gen1.png, id=32, 1208.515pt x 431.6125pt>
+File: images/10gen1.png Graphic file (type png)
+<use images/10gen1.png>
+Package pdftex.def Info: images/10gen1.png  used on input line 109.
+(pdftex.def)             Requested size: 483.39743pt x 172.64194pt.
+<images/10gen2.png, id=33, 1205.50375pt x 432.61626pt>
+File: images/10gen2.png Graphic file (type png)
+<use images/10gen2.png>
+Package pdftex.def Info: images/10gen2.png  used on input line 115.
+(pdftex.def)             Requested size: 482.19296pt x 173.04343pt.
+ [4 <./images/5gen2.png> <./images/5gen3.png> <./images/10gen1.png>]
+<images/10gen3.png, id=37, 1203.49625pt x 428.60126pt>
+File: images/10gen3.png Graphic file (type png)
+<use images/10gen3.png>
+Package pdftex.def Info: images/10gen3.png  used on input line 121.
+(pdftex.def)             Requested size: 481.38997pt x 171.43745pt.
+<images/15gen1.png, id=38, 1206.5075pt x 429.605pt>
+File: images/15gen1.png Graphic file (type png)
+<use images/15gen1.png>
+Package pdftex.def Info: images/15gen1.png  used on input line 128.
+(pdftex.def)             Requested size: 482.59445pt x 171.83894pt.
+<images/15gen2.png, id=39, 1206.5075pt x 430.60875pt>
+File: images/15gen2.png Graphic file (type png)
+<use images/15gen2.png>
+Package pdftex.def Info: images/15gen2.png  used on input line 134.
+(pdftex.def)             Requested size: 482.59445pt x 172.24043pt.
+ [5 <./images/10gen2.png> <./images/10gen3.png> <./images/15gen1.png>]
+<images/15gen3.png, id=43, 1203.49625pt x 433.62pt>
+File: images/15gen3.png Graphic file (type png)
+<use images/15gen3.png>
+Package pdftex.def Info: images/15gen3.png  used on input line 140.
+(pdftex.def)             Requested size: 481.38997pt x 173.44492pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+[6 <./images/15gen2.png> <./images/15gen3.png>] (practica3.aux (portada.aux)
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 3726 strings out of 492973
- 51212 string characters out of 3135929
- 136901 words of memory out of 3000000
- 7528 multiletter control sequences out of 15000+200000
- 8281 words of font info for 29 fonts, out of 3000000 for 9000
+ 3775 strings out of 492973
+ 52111 string characters out of 3135929
+ 138901 words of memory out of 3000000
+ 7567 multiletter control sequences out of 15000+200000
+ 8589 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,45p,318b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on practica3.pdf (5 pages, 96342 bytes).
+ 41i,12n,45p,652b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmti12.pfb>
+Output written on practica3.pdf (7 pages, 242016 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
+ 74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
