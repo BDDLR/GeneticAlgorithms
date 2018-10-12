@@ -31,12 +31,17 @@ int main(int argc, char const *argv[])
 
 	for (int k = 0; k < NUM_GENERATIONS; k++)
 	{
-		int totalAptitude = getTotalAptitude(initial_individuals);
-
-		for (int i = 0; i < TOTAL_INDIVIDUALS; i++)
+		for (int z = 0; z < P_TOURNAMENT_INDIVIDUALS; z++)
 		{
-			tournament_selection[i] = rouletteSelection(initial_individuals, totalAptitude);
+			shufflePopulation(initial_individuals);
+
+			for (int i = 0, winner = z*(TOTAL_INDIVIDUALS/P_TOURNAMENT_INDIVIDUALS); i < TOTAL_INDIVIDUALS; i+=2)
+			{
+				tournament_selection[winner] = tournamentSelection(initial_individuals[i], initial_individuals[i+1]);
+				winner++;
+			}
 		}
+
 
 		for (int i = 0; i < TOTAL_INDIVIDUALS; )
 		{
@@ -83,13 +88,7 @@ int main(int argc, char const *argv[])
 		
 	}
 
-	/*for (int i = 0; i < NUM_GENERATIONS; i++)
-	{
-		cout << minGenerationValues[i] << " - " << maxGenerationValues[i] << " - " << generationValuesAverage[i] << endl;
-	}*/
-
 	drawHistogram(minGenerationValues, maxGenerationValues, generationValuesAverage, NUM_GENERATIONS);
-	
 
 	return 0;
 }
@@ -101,7 +100,7 @@ void drawHistogram(int minGenerationValues[], int maxGenerationValues[], int gen
 	int max = 300;
 	int step = 1000 / num_gen;
 
-	gfx_open(xsize,ysize,"Roulette Selection Results");
+	gfx_open(xsize,ysize,"Tournament Selection Results");
 
 	// Set the current drawing color to green.
 	gfx_color(0,255,0);
@@ -114,10 +113,8 @@ void drawHistogram(int minGenerationValues[], int maxGenerationValues[], int gen
 		gfx_Number((i+1)*step, 320, (char*)to_string(i+1).c_str());	
 
 	}
-
 	// Set the current drawing color to red.
 	gfx_color(255,0,0);
-
 	//Draw the minumum values
 	for (int i = 0; i < num_gen ; i++)
 	{
@@ -130,10 +127,8 @@ void drawHistogram(int minGenerationValues[], int maxGenerationValues[], int gen
 		}
 		
 	}
-
 	// Set the current drawing color to blue.
 	gfx_color(0,0,255);
-
 	//Draw the maximum values
 	for (int i = 0; i < num_gen ; i++)
 	{
@@ -146,7 +141,6 @@ void drawHistogram(int minGenerationValues[], int maxGenerationValues[], int gen
 		}
 		
 	}
-
 	// Set the current drawing color to white.
 	gfx_color(255,255,255);
 
@@ -159,13 +153,8 @@ void drawHistogram(int minGenerationValues[], int maxGenerationValues[], int gen
 		else{
 			gfx_line((i+1)*step, max - (generationValuesAverage[i] * factor), (i+2)*step, max - (generationValuesAverage[i+1] * factor));
 			gfx_Number((i+1)*step-5, max - (generationValuesAverage[i] * factor + 10), (char*)to_string(generationValuesAverage[i]).c_str());
-		}
-		
+		}		
 	}
-
-
-
-
 
 	char c;
 	while(1) {

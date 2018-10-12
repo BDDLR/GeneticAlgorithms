@@ -1,5 +1,7 @@
 #include "tournament.h"
 #include <iostream>
+#include <algorithm>
+#include <array>
 void fillIndividuals(bitset<BITS_PER_INDIVIDUAL> set[]){
 	srand (time(NULL));
 	for (int i = 0; i < TOTAL_INDIVIDUALS; i++)
@@ -37,6 +39,48 @@ bitset<BITS_PER_INDIVIDUAL> rouletteSelection(bitset<BITS_PER_INDIVIDUAL> set[],
         add += getIndividualAptitude(set[i]);
     }
     return set[i];
+}
+
+void shufflePopulation(bitset<BITS_PER_INDIVIDUAL> set[]){
+	
+	array<int, TOTAL_INDIVIDUALS> arr;
+	bitset<BITS_PER_INDIVIDUAL> aux[TOTAL_INDIVIDUALS];
+	int aux1;
+	int aux2;
+
+	for (int i = 0; i < TOTAL_INDIVIDUALS; i++)
+	{
+		arr[i] = set[i].to_ulong();
+	}
+
+	random_shuffle(arr.begin(), arr.end());
+
+	for (int i = 0; i < TOTAL_INDIVIDUALS; i++)
+	{
+		set[i] = arr[i];
+	}
+}
+
+bitset<BITS_PER_INDIVIDUAL> tournamentSelection(bitset<BITS_PER_INDIVIDUAL> &p1, bitset<BITS_PER_INDIVIDUAL> &p2){
+	
+	int flip = rand() % 2;
+
+	if((p1.to_ulong() < p2.to_ulong()) && flip == 1)
+	{
+		return p2;
+	}
+	else if ((p1.to_ulong() < p2.to_ulong()) && flip == 0)
+	{
+		return p1;
+	}
+	else if ((p1.to_ulong() > p2.to_ulong()) && flip == 1)
+	{
+		return p1;
+	}
+	else{
+		return p2;
+	}
+	
 }
 
 bitset<BITS_PER_INDIVIDUAL> crossAlgorithm(bitset<BITS_PER_INDIVIDUAL> &p1, bitset<BITS_PER_INDIVIDUAL> &p2, int cross_point) {

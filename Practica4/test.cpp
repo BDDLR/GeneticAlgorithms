@@ -1,4 +1,7 @@
 #include <iostream>
+#include <algorithm>
+#include <array>
+#include <chrono>
 #include "tournament.h"
 
 using namespace std;
@@ -14,28 +17,46 @@ using namespace std;
 	- Elegir un individuo al azar -> esto completa los 32 individuos
 */
 
-bitset<BITS_PER_INDIVIDUAL>* sortPopulation(bitset<BITS_PER_INDIVIDUAL> set[]){
+void shufflePopulation(bitset<BITS_PER_INDIVIDUAL> set[]){
 	
+	array<int, TOTAL_INDIVIDUALS> arr;
+	bitset<BITS_PER_INDIVIDUAL> aux[TOTAL_INDIVIDUALS];
 	int aux1;
 	int aux2;
 
-	//bitset<BITS_PER_INDIVIDUAL>* aux = set;
+	for (int i = 0; i < TOTAL_INDIVIDUALS; i++)
+	{
+		arr[i] = set[i].to_ulong();
+	}
 
-	bitset<BITS_PER_INDIVIDUAL> aux[TOTAL_INDIVIDUALS];
+	random_shuffle(arr.begin(), arr.end());
 
 	for (int i = 0; i < TOTAL_INDIVIDUALS; i++)
 	{
-		aux[i] = set[i];
+		set[i] = arr[i];
 	}
+}
 
-	for (int i = 0; i < TOTAL_INDIVIDUALS; i++)
+bitset<BITS_PER_INDIVIDUAL> tournamentSelection(bitset<BITS_PER_INDIVIDUAL> &p1, bitset<BITS_PER_INDIVIDUAL> &p2){
+	
+	int flip = rand() % 2;
+
+	if((p1.to_ulong() < p2.to_ulong()) && flip == 1)
 	{
-		aux1 = rand() % TOTAL_INDIVIDUALS;
-		aux2 = rand() % TOTAL_INDIVIDUALS;
-
-		set[i].set();
+		return p2;
 	}
-	return aux;
+	else if ((p1.to_ulong() < p2.to_ulong()) && flip == 0)
+	{
+		return p1;
+	}
+	else if ((p1.to_ulong() > p2.to_ulong()) && flip == 1)
+	{
+		return p1;
+	}
+	else{
+		return p2;
+	}
+	
 }
 
 int main(int argc, char const *argv[])
@@ -45,20 +66,16 @@ int main(int argc, char const *argv[])
 
 	fillIndividuals(initial_individuals);
 
-	for (int i = 0; i < TOTAL_INDIVIDUALS; i++)
+	for (int z = 0; z < 2; ++z)
 	{
-		cout << initial_individuals[i] << endl;
+		shufflePopulation(initial_individuals);
+
+		for (int i = 0, winner = z*16; i < TOTAL_INDIVIDUALS; i+=2)
+		{
+			tournament_selection[winner] = tournamentSelection(initial_individuals[i], initial_individuals[i+1]);
+			winner++;
+		}
 	}
-
-	cout << " ------- " << endl;
-
-	sortPopulation(initial_individuals);
-
-	for (int i = 0; i < TOTAL_INDIVIDUALS; i++)
-	{
-		cout << initial_individuals[i] << endl;
-	}
-
 	
 	return 0;
 }
