@@ -1,5 +1,4 @@
 #include <bitset>
-#include <random>
 
 #define TOTAL_INDIVIDUALS 32
 #define BITS_PER_INDIVIDUAL 5
@@ -20,7 +19,7 @@ void printIndividuals(bitset<BITS_PER_INDIVIDUAL> set[]);
 
 int getIndividualValue(bitset<BITS_PER_INDIVIDUAL> individual);
 
-int getIndividualAptitude(bitset<BITS_PER_INDIVIDUAL> individual);
+float getIndividualAptitude(bitset<BITS_PER_INDIVIDUAL> individual);
 
 int getTotalAptitude(bitset<BITS_PER_INDIVIDUAL> set[]);
 

@@ -96,7 +96,7 @@ int main(int argc, char const *argv[])
 void drawHistogram(int minGenerationValues[], int maxGenerationValues[], int generationValuesAverage[], int num_gen){
 	int ysize = 400;
 	int xsize = 1200;
-	float factor = 0.2;	
+	float factor = 10;	
 	int max = 300;
 	int step = 1000 / num_gen;
 

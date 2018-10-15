@@ -2,6 +2,8 @@
 #include <iostream>
 #include <algorithm>
 #include <array>
+#include <cmath>
+
 void fillIndividuals(bitset<BITS_PER_INDIVIDUAL> set[]){
 	srand (time(NULL));
 	for (int i = 0; i < TOTAL_INDIVIDUALS; i++)
@@ -17,8 +19,19 @@ int getIndividualValue(bitset<BITS_PER_INDIVIDUAL> individual){
 	return individual.to_ulong();
 }
 
-int getIndividualAptitude(bitset<BITS_PER_INDIVIDUAL> individual){
-	return (individual.to_ulong()*individual.to_ulong());
+float getIndividualAptitude(bitset<BITS_PER_INDIVIDUAL> individual){
+	float result;
+	float numerador;
+	float denominador;
+	float x = individual.to_ulong();
+	float senX = sin(x);
+
+	numerador = x - 5;
+	denominador = 2 + senX;
+
+	result = abs(numerador/denominador);
+
+	return result;
 }	
 
 int getTotalAptitude(bitset<BITS_PER_INDIVIDUAL> set[]){
@@ -63,17 +76,19 @@ void shufflePopulation(bitset<BITS_PER_INDIVIDUAL> set[]){
 
 bitset<BITS_PER_INDIVIDUAL> tournamentSelection(bitset<BITS_PER_INDIVIDUAL> &p1, bitset<BITS_PER_INDIVIDUAL> &p2){
 	
-	int flip = rand() % 2;
+	float flip = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
 
-	if((p1.to_ulong() < p2.to_ulong()) && flip == 1)
+	//printf("%.2f\n", flip);
+
+	if((getIndividualAptitude(p1) < getIndividualAptitude(p2)) && flip >= 0.70)
 	{
 		return p2;
 	}
-	else if ((p1.to_ulong() < p2.to_ulong()) && flip == 0)
+	else if ((getIndividualAptitude(p1) < getIndividualAptitude(p2)) && flip < 0.70)
 	{
 		return p1;
 	}
-	else if ((p1.to_ulong() > p2.to_ulong()) && flip == 1)
+	else if ((getIndividualAptitude(p1) > getIndividualAptitude(p2)) && flip >= 0.70)
 	{
 		return p1;
 	}
