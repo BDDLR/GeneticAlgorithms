@@ -148,7 +148,7 @@ int main(int argc, char const *argv[])
 				printIndividuals(h1);
 				cout << "Hijo 2: ";
 				printIndividuals(h2);
-				cout << endl;
+				cout << endl; 
 				cout << endl;
 			break;
 			case 4:
