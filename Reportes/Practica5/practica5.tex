@@ -1,0 +1,131 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{style}
+
+%% ------- INICIA DOCUMENTO ------
+\begin{document}
+\include{portada}
+%% --------- COMIENZA EL DESARROLLO DEL DOCUMENTO --------
+
+\section*{Introducción}
+
+La selección por jerarquía fue propuesta por Baker para evitar la convergencia prematura en las técnicas de selección proporcional. El objetivo de esta técnica es disminuir la presión de selección. En este caso, discutiremos el uso de jerarquías lineales, pero es posible también usar jerarquías no lineales, aunque la presión de selección sufre cambios más abruptos al usarse esta última.
+Los individuos se clasifican con base en su aptitud, y se les selecciona con
+base en su rango (o jerarquía) y no con base en su aptitud. El uso de jerarquías
+hace que no se requiera escalar la aptitud, puesto que las diferencias entre las
+aptitudes absolutas se diluyen. Asimismo, las jerarquías previenen la convergencia prematura (de hecho, lo que hacen, es alentar la velocidad convergencia del
+algoritmo genético).
+
+\section*{Contenido}
+Para la implementación del algoritmo de selección por jerarquía, implementé 4 arreglos de bits para controlar las distintas etapas que se realizan en el algoritmo:
+\begin{itemize}
+	\item Población inicial.
+	\item Población de individuos seleccionados mediante el algoritmo de selección por torneo.
+	\item Población después de cruza.
+	\item Población después de mutación.
+\end{itemize}
+
+
+En la primer etapa, se llena aleatoriamente el arreglo de población inicial con series de 5 bits. Después se realiza una selección por ranking o jerarquía, el algoritmo inicia ordenando la población con base en su aptitud, de 1 a N (donde 1 representa al menos apto). Posteriormente el algoritmo es el siguiente:
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 1]{images/algo}
+	\caption{Algoritmo de selección por jerarquía o ranking}
+\end{figure}
+
+Una vez teniendo la población de selección de padres, se realiza una cruza de individuos de la siguiente manera:
+
+\begin{enumerate}
+	\item Se utilizan 2 individuos de la población de padres.
+	\item Se define un punto de cruza estático para todas las generaciones.
+	\item Se cruzan los individuos.
+	\item Se retorna el individuo resultante.
+\end{enumerate}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = .8]{images/cruza}
+	\caption{Algoritmo de cruza de individuos}
+\end{figure}
+
+Al obtener la población de individuos después de la cruza se necesita realizar una mutación. En este caso se generó una mutación del 10\% de la población. Nuestra población total es de 32 elementos, entonces la cantidad de individuos a redondear es 3.2, redondeado como 3.\\
+
+La mutación se realiza de la siguiente forma:
+\begin{enumerate}
+	\item El algoritmo se realizará 3 veces.
+	\item La mutación buscará mejorar al individuo, por lo tanto, se buscará cambiar un bit 0 por un bit 1.
+	\item Debido a que se requiere buscar un 0 en el individuo a mutar, y es posible que el individuo no tenga bits 0, se define un número máximo de iteraciones para evitar que el programa se cicle.
+	\item Cuando se encuentre un bit 0, se cambia por un bit 1.
+\end{enumerate}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 1]{images/mutacion}
+	\caption{Algoritmo de mutación de individuos}
+\end{figure}
+
+Una vez que se tenga la población mutada, se establece ésta como población inicial, para realizar el algoritmo de ruleta en la siguiente generación.\\
+
+Al obtener la población final de una generación, se obtiene la aptitud del individuo de menor valor, la aptitud del individuo de mayor valor y el promedio de aptitud de cada generación.\\
+
+A continuación se muestran 2 ejemplos con 10, 30, 50 y 100 generaciones, en los que la línea azul representa la aptitud del mejor individuo de cada generación, la línea roja representa la aptitud del peor individuo de cada generación y la línea blanca representa el promdedio de aptitud de cada generación.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/10gen1}
+	\caption{Resultado 1 con 10 generaciones}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/10gen2}
+	\caption{Resultado 2 con 10 generaciones}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/30gen1}
+	\caption{Resultado 1 con 30 generaciones}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/30gen2}
+	\caption{Resultado 2 con 30 generaciones}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/50gen1}
+	\caption{Resultado 1 con 50 generaciones}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/50gen2}
+	\caption{Resultado 2 con 50 generaciones}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/100gen1}
+	\caption{Resultado 1 con 100 generaciones}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{images/100gen2}
+	\caption{Resultado 2 con 100 generaciones}
+\end{figure}
+
+
+\section*{Conclusión}
+
+
+El fin de un algoritmo genético es simular la evolución de una población de individuos. En esta práctica, utilizamos distintos métodos aleatorios que se presentan en la naturaleza y generan una evolución, tales como la cruza y mutación de individuos, sin olvidar la selección de individuos para siguientes generaciones. Ésta selección se inicio con un ordenamiento de individuos con base en su ranking o jerarquía, lo que hace distinta ésta práctica a la práctica número 3, donde la selección por ruleta se hacia sin tomar en cuenta el ordenamiento de ranking.\\
+
+El algoritmo genético de selección por ruleta es uno de los más utilizados, sin embargo considero que pueden existir casos en los que la selección de individuos se aplique sobre los individuos de menor aptitud, dado que el número aleatorio de referencia puede ocasionar que se seleccione un individuo con poca aptitud. Aún así, este algoritmo genético permite dar un vistazo de las distintas combinaciones que se presentan en la naturaleza, tanto de flora o fauna, y nos concientiza acerca de que no siempre los individuos más aptos son los que sobreviven, sin embargo, tienen una mayor probabilidad de conseguirlo.
+
+\end{document}
+
+
